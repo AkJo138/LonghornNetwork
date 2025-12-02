@@ -1,0 +1,110 @@
+
+========================================
+=== Running Test Case 1 ===
+========================================
+
+--- Built-in Test Data for Test Case 1 ---
+UniversityStudent@6b95977
+UniversityStudent@7e9e5f8a
+UniversityStudent@8bcc55f
+UniversityStudent@58644d46
+UniversityStudent@14dad5dc
+UniversityStudent@18b4aac2
+
+--- Automated Tests for Test Case 1 ---
+
+Student Graph:
+Frank -> []
+Charlie -> [(Alice ,1)]
+Bob -> [(Alice ,5)]
+Dana -> [(Evan ,6)]
+Evan -> [(Dana ,6)]
+Alice -> [(Bob ,5), (Charlie ,1)]
+Test: StudentGraph passed (+30 pts).
+
+Roommate Pairings (Gale-Shapley):
+Frank paired with Charlie
+Bob paired with Alice
+Dana paired with Evan
+Test: GaleShapley passed (+20 pts).
+FriendRequest (Thread-Safe): Alice sent a friend request to Bob
+FriendRequest (Thread-Safe): Bob sent a friend request to Alice
+Alice sent message to Bob: Hello there!
+Bob sent message to Alice: Hi back!
+Test: FriendRequestThread/ChatThread passed (+20 pts).
+ReferralPathFinder returned path: [UniversityStudent@6b95977]
+Test: ReferralPathFinder passed (+10 pts).
+Test: Integration passed (+20 pts).
+
+Total Score for Test Case 1: 100
+
+Test Case 1 Final Score: 100
+
+========================================
+=== Running Test Case 2 ===
+========================================
+
+--- Built-in Test Data for Test Case 2 ---
+UniversityStudent@4d7e1886
+UniversityStudent@3cd1a2f1
+UniversityStudent@2f0e140b
+
+--- Automated Tests for Test Case 2 ---
+
+Student Graph:
+Helen -> [(Greg ,3), (Ivy ,2)]
+Ivy -> [(Greg ,2), (Helen ,2)]
+Greg -> [(Helen ,3), (Ivy ,2)]
+Test: StudentGraph passed (+30 pts).
+
+Roommate Pairings (Gale-Shapley):
+Helen paired with Greg
+Test: GaleShapley passed (+20 pts).
+FriendRequest (Thread-Safe): Greg sent a friend request to Helen
+Greg sent message to Helen: Hello there!
+FriendRequest (Thread-Safe): Helen sent a friend request to Greg
+Helen sent message to Greg: Hi back!
+Test: FriendRequestThread/ChatThread passed (+20 pts).
+ReferralPathFinder returned path: [UniversityStudent@4d7e1886]
+Test: ReferralPathFinder passed (+10 pts).
+Test: Integration passed (+20 pts).
+
+Total Score for Test Case 2: 100
+
+Test Case 2 Final Score: 100
+
+========================================
+=== Running Test Case 3 ===
+========================================
+
+--- Built-in Test Data for Test Case 3 ---
+UniversityStudent@5a07e868
+UniversityStudent@76ed5528
+UniversityStudent@2c7b84de
+
+--- Automated Tests for Test Case 3 ---
+
+Student Graph:
+Kim -> [(Jack ,6), (Leo ,2)]
+Leo -> [(Jack ,2), (Kim ,2)]
+Jack -> [(Kim ,6), (Leo ,2)]
+Test: StudentGraph passed (+30 pts).
+
+Roommate Pairings (Gale-Shapley):
+Kim paired with Jack
+Test: GaleShapley passed (+20 pts).
+FriendRequest (Thread-Safe): Jack sent a friend request to Kim
+Jack sent message to Kim: Hello there!
+FriendRequest (Thread-Safe): Kim sent a friend request to Jack
+Kim sent message to Jack: Hi back!
+Test: FriendRequestThread/ChatThread passed (+20 pts).
+ReferralPathFinder returned path: [UniversityStudent@5a07e868]
+Test: ReferralPathFinder passed (+10 pts).
+Test: Integration passed (+20 pts).
+
+Total Score for Test Case 3: 100
+
+Test Case 3 Final Score: 100
+
+========================================
+Average Score across all test cases: 100

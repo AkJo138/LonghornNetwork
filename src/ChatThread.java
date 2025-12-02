@@ -2,6 +2,11 @@
  * Thread that makes "chat" between two UniversityStudent instances possible.
  */
 public class ChatThread implements Runnable {
+    
+    private UniversityStudent sender;
+    private UniversityStudent receiver;
+    private String message;
+
     /**
      * Constructor for a new ChatThread
      *
@@ -11,6 +16,9 @@ public class ChatThread implements Runnable {
      */
     public ChatThread(UniversityStudent sender, UniversityStudent receiver, String message) {
         // Constructor
+        this.sender = sender;
+        this.receiver = receiver;
+        this.message = message;
     }
 
     /**
@@ -19,6 +27,8 @@ public class ChatThread implements Runnable {
      */
     @Override
     public void run() {
-        // Method signature only
+        sender.addToChatHistory("To " + receiver.name + ": " + message);
+        receiver.addToChatHistory("From " + sender.name + ": " + message);
+        System.out.println(sender.name + " sent message to " + receiver.name + ": " + message);
     }
 }

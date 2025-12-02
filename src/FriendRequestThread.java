@@ -1,7 +1,13 @@
+import java.util.concurrent.Semaphore;
 /**
  * Thread for sending and receiving a friend request
  */
 public class FriendRequestThread implements Runnable {
+
+    private UniversityStudent sender;
+    private UniversityStudent receiver;
+
+    private static final Semaphore semaphore = new Semaphore(1);
     /**
      * Constructor for new FriendRequestThread
      *
@@ -10,6 +16,8 @@ public class FriendRequestThread implements Runnable {
      */
     public FriendRequestThread(UniversityStudent sender, UniversityStudent receiver) {
         // Constructor
+        this.sender = sender;
+        this.receiver = receiver;
     }
 
     /**
@@ -18,6 +26,18 @@ public class FriendRequestThread implements Runnable {
      */
     @Override
     public void run() {
-        // Method signature only
+        try{
+            semaphore.acquire();
+            sender.addFriend(receiver);
+            receiver.addFriend(sender);
+            System.out.println("FriendRequest (Thread-Safe): " + sender.name  + " sent a friend request to " + receiver.name);
+        }
+        catch(InterruptedException e){
+            Thread.currentThread().interrupt();
+            System.err.println("FriendRequest interrupted: " + e.getMessage());
+        }
+        finally{
+            semaphore.release();    
+        } 
     }
 }
