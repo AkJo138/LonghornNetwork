@@ -80,6 +80,8 @@ public class UniversityStudent extends Student {
             chatHistory.add(message);
         }
     }
-
+    public String getName() {
+        return this.name;
+    }
 
 }

@@ -12,6 +12,7 @@ public class ReferralPathFinder {
      * @param graph graph that determines path and referral connections
      */
     public ReferralPathFinder(StudentGraph graph) {
+        // Constructor
         this.graph = graph;
     }
 
